@@ -33,7 +33,7 @@ body {
 .primary-btn {
   border-radius: 3rem;
   padding: 1.3rem 2.5rem;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   background: #f948b2;
 }
 button,
@@ -108,6 +108,7 @@ nav {
 .banner-info {
   /* width: calc( 50% - 240px) */
   width: 50%;
+ 
 }
 .banner-info .btn-blue {
   background: #4ec5f7;
@@ -131,10 +132,11 @@ nav {
   width: 50%;
   /*  width: calc( 50% - 240px); */
 }
-.
+
 /* .banner-image img{
     width: 100%;
 } */
+
 /* header section styles end here */
 
 
@@ -143,14 +145,27 @@ nav {
 
 @media screen and (max-width: 576px) {
   .header-section,
-  .menu-container ul {
+  .menu-container ul
+  {
     flex-direction: column;
     gap: 20px;
   }
-  /* .header-section,
-  .menu-container ul {
-    gap: 20px;
-  } */
+  .banner{
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 30px;
+  }
+  .banner-info{
+    width: 100%;
+    margin: 50px 0;
+  }
+ 
+  .banner-image,
+  .banner-image img{
+    width: 100%;
+  }
+ 
+  
 }
 
 /* tablet device media query */
@@ -164,4 +179,25 @@ nav {
   .menu-container ul {
     gap: 20px;
   } */
+  .banner{
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 30px;
+  }
+  .banner-info{
+    width: 100%;    
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner-image,
+  .banner-image img{
+    width: 100%;        
+    
+  }
+  
+  
 }
+
