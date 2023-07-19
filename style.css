@@ -171,19 +171,7 @@ nav {
   line-height: 30px;
   margin-top: 24px;
 }
-.card img:hover {
-  /* border-radius: 16px;
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.6) 100%
-    ),
-    url("./icons/play-button\ 1.svg"), lightgray 50% / cover no-repeat;
-     */
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 2px solid red;
-  border-radius: 16px;
-}
+
 /* funny video section styles end here */
 /* play instantly section styles start here  */
 .play-instantly-section {
@@ -218,29 +206,23 @@ nav {
   align-items: center;
   justify-content: center;
 }
-.games-btn-container div a{
- text-decoration: none;
- 
+.games-btn-container div a {
+  text-decoration: none;
 }
 .games-btn {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 28px 20px;
+  padding: 20px 20px;
   border: none;
   border-radius: 50px;
   transition: border 0.3 easy, color 0.3 ease;
   border: 1px solid transparent;
-
-  
 }
 .games-btn:hover {
-
   border: 1px solid #f948b2;
-  
-
 }
-.games-btn:hover p{
+.games-btn:hover p {
   color: #f948b2;
 }
 /* .games-btn a{
@@ -250,9 +232,7 @@ nav {
   color: var(--primary-color);
   font-size: 20px;
   font-weight: 600;
-  
 }
-
 
 /*  games button section styles end here */
 
@@ -382,25 +362,22 @@ footer {
   .play-instantly-info .primary-description {
     padding: 30px 0;
   }
- .games-btn-container{
-  margin: 130px 0;
- }
-  .games-btn img{
+  .games-btn-container {
+    margin: 130px 0;
+  }
+  .games-btn img {
     width: 40px;
   }
-  .games-btn p{
+  .games-btn p {
     font-size: 20px;
   }
-  .games-btn{
+  .games-btn {
     gap: 0px;
     padding: 10px 5px;
     margin: 10px 5px;
-    
   }
-  
- 
 
- /*  .games-btn {
+  /*  .games-btn {
     flex-basis: 33.33%;
     max-width: 33.33%;
   } */
@@ -470,6 +447,4 @@ footer {
   .footer-btn ul {
     flex-wrap: wrap;
   }
-
- 
 }
