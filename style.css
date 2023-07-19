@@ -213,12 +213,14 @@ nav {
 /*  games button section styles start here */
 .games-btn-container {
   margin: 220px 0;
-  /* display: grid;
-  grid-template-columns: repeat(5, 1fr); */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+.games-btn-container div a{
+ text-decoration: none;
+ 
 }
 .games-btn {
   display: flex;
@@ -226,18 +228,32 @@ nav {
   gap: 20px;
   padding: 28px 20px;
   border: none;
-  background-color: #fff;
-}
-.game-btn:hover {
-  border: 2px solid var(--third-color);
   border-radius: 50px;
-}
+  transition: border 0.3 easy, color 0.3 ease;
+  border: 1px solid transparent;
 
+  
+}
+.games-btn:hover {
+
+  border: 1px solid #f948b2;
+  
+
+}
+.games-btn:hover p{
+  color: #f948b2;
+}
+/* .games-btn a{
+  color:#f948b2;
+} */
 .games-btn p {
-  columns: var(--primary-color);
+  color: var(--primary-color);
   font-size: 20px;
   font-weight: 600;
+  
 }
+
+
 /*  games button section styles end here */
 
 /* footer section styles start here */
@@ -366,13 +382,28 @@ footer {
   .play-instantly-info .primary-description {
     padding: 30px 0;
   }
-  .games-btn-container {
+ .games-btn-container{
+  margin: 130px 0;
+ }
+  .games-btn img{
+    width: 40px;
   }
+  .games-btn p{
+    font-size: 20px;
+  }
+  .games-btn{
+    gap: 0px;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    
+  }
+  
+ 
 
-  .games-btn {
+ /*  .games-btn {
     flex-basis: 33.33%;
     max-width: 33.33%;
-  }
+  } */
   .footer-btn ul {
     flex-wrap: wrap;
   }
