@@ -163,6 +163,7 @@ nav {
 .card {
   max-width: 342px;
   padding-bottom: 50px;
+  border: 1px solid transparent;
 }
 .card-caption {
   color: var(--secondary-color);
