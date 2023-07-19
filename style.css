@@ -8,6 +8,7 @@
 :root {
   --primary-color: #0b0223;
   --secondary-color: #534c64;
+  --third-color: #ff42a5;
   --linier-color: linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%);
 }
 body {
@@ -187,7 +188,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  gap: 200px
 }
 .play-instantly-info{
   text-align: right;
@@ -200,17 +201,56 @@ nav {
 }
 .instantly-img{
   position: absolute;
-  top: 400px;
-  right: 450px;
+  /* top: 400px;
+  right: 450px; */
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 100%);
 }
 /* play instantly section styles end here  */
+/*  games button section styles start here */
+.games-btn-container{
+  margin: 120px 0;
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  justify-content: center;
+
+}
+.games-btn{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 20px; 
+  border: none;
+  background-color: #fff;
+  /* border: 2px solid var(--third-color);
+  border-radius: 50px; */
+}
+
+.games-btn p{
+  columns: var(--primary-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+/*  games button section styles end here */
+ 
+
+
+
+
+
+
 
 /* Responsive styles start here */
 /* mobile device media query */
 
 @media screen and (max-width: 576px) {
   .header-section,
-  .menu-container ul {
+  .menu-container ul,
+  .play-instantly-section {
     flex-direction: column;
     gap: 20px;
   }
@@ -231,13 +271,60 @@ nav {
   .card-container {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
+    width: 90%;
   }
-}
+ /*  .play-instantly-image{
+    width: 100%;
+  }
+  .instantly-img{
+    width: 100%;
+  } */
+ /*  .instantly-img {
+    position: static;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block;
+  } */
+  .play-instantly-image{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .play-instantly-image .instantly-image1{
+    width: 100%;
+  }
+  .instantly-img{
+    width: 50%;
+    top: 10%;
+    left: 5%;
+    /* transform: translate(-80%, 50%); */
+  }
+  .play-instantly-info{
+    text-align: center;
+  }
+  .play-instantly-info .primary-description{
+    padding: 30px 0;
+  }
+  .games-btn-container{
+
+  }
+  .games-btn{
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+   }
+ 
+  }
+  
+  
+
+
 
 /* tablet device media query */
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .header-section,
-  .menu-container ul {
+  .menu-container ul,
+  .play-instantly-section {
     flex-direction: column;
     gap: 20px;
   }
@@ -266,4 +353,25 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
+  .play-instantly-image{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .play-instantly-image .instantly-image1{
+    width: 100%;
+  }
+  .instantly-img{
+    width: 50%;
+    top: 10%;
+    left: 5%;
+    /* transform: translate(-80%, 50%); */
+  }
+  .play-instantly-info{
+    text-align: center;
+  }
+  .play-instantly-info .primary-description{
+    padding: 30px 0;
+  }
 }
+
+
