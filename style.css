@@ -57,6 +57,7 @@ main {
 nav {
   padding: 38px 0;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+
 }
 .header-section {
   display: flex;
@@ -234,7 +235,9 @@ nav {
 
 /* funny video section styles end here */
 /* play instantly section styles start here  */
-.play-instantly-section {
+.play-instantly-section,
+.play-games-section
+ {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -245,19 +248,41 @@ nav {
 }
 .play-instantly-info .primary-description {
   text-align: right;
+  padding: 0;
+  margin-top: 24px;
 }
-.play-instantly-image {
+.play-instantly-image,
+.play-games-image {
   position: relative;
 }
-.instantly-img {
+.instantly-img,
+.games-image {
   position: absolute;
-  /* top: 400px;
-  right: 450px; */
   top: 0;
   left: 0;
   transform: translate(-50%, 100%);
 }
 /* play instantly section styles end here  */
+/* play games section styles start here  */
+.play-games-section{
+  margin-top: 200px;
+}
+.play-games-info {
+  text-align: left;
+}
+.play-games-info .primary-description {
+  text-align: left;
+  padding: 0;
+  margin-top: 24px;
+}
+.games-img {
+  position: absolute;
+ /*  top: 0;
+  right: 0; */
+  transform: translate(-50%, 100%);
+}
+/* play games section styles end here  */
+
 /*  games button section styles start here */
 .games-btn-container {
   margin: 220px 0;
@@ -382,9 +407,13 @@ footer {
 @media screen and (max-width: 576px) {
   .header-section,
   .menu-container ul,
-  .play-instantly-section {
+  .play-instantly-section,
+  .play-games-section {
     flex-direction: column;
     gap: 20px;
+  }
+  .play-games-section{
+    flex-direction: column-reverse;
   }
   .banner {
     flex-direction: column-reverse;
@@ -412,25 +441,31 @@ footer {
    padding: 0;
   }
 
-  .play-instantly-image {
+  .play-instantly-image,
+  .play-games-image {
     width: 70%;
     margin: 0 auto;
   }
-  .play-instantly-image .instantly-image1 {
+  .play-instantly-image .instantly-image1,
+  .play-games-image .games-image1 {
     width: 100%;
   }
-  .instantly-img {
+  .instantly-img,
+  .games-img {
     width: 50%;
     top: 10%;
     left: 5%;
     /* transform: translate(-80%, 50%); */
   }
-  .play-instantly-info {
+  .play-instantly-info,
+  .play-games-info {
     text-align: center;
+    padding: 0 30px;
   }
-  .play-instantly-info .primary-description {
-    padding: 30px 0;
-  }
+ /*  .play-games-info .primary-description
+  {
+    padding: 0 30px;
+  } */
   .games-btn-container {
     margin: 130px 0;
     display: grid;
@@ -467,14 +502,15 @@ footer {
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .header-section,
   .menu-container ul,
-  .play-instantly-section {
+  .play-instantly-section,
+  .play-games-section {
     flex-direction: column;
     gap: 20px;
   }
-  /*  .header-section,
-  .menu-container ul {
-    gap: 20px;
-  } */
+  .play-games-section{
+    flex-direction: column-reverse;
+  }
+  
   .banner {
     flex-direction: column-reverse;
     padding: 0;
@@ -489,38 +525,52 @@ footer {
     align-items: center;
   }
   .banner-image,
-  .banner-image img {
+  .banner-image img,
+  .play-instantly-image .instantly-image1,
+  .play-games-image .games-image1 {
     width: 100%;
   }
+ 
   .card-container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
   }
-  .play-instantly-image {
+  .play-instantly-image,
+  .play-games-image {
     width: 70%;
     margin: 0 auto;
   }
-  .play-instantly-image .instantly-image1 {
-    width: 100%;
-  }
-  .instantly-img {
+  
+  .instantly-img,
+  .games-img {
     width: 50%;
     top: 10%;
     left: 5%;
     /* transform: translate(-80%, 50%); */
   }
-  .play-instantly-info {
+  .play-instantly-info,
+  .play-games-info {
     text-align: center;
   }
-  .play-instantly-info .primary-description {
-    padding: 30px 0;
+  .play-instantly-info,
+  .play-games-info {
+    text-align: center;
+    padding: 0 30px;
   }
+  .play-instantly-info .primary-description,
+  .play-games-info .primary-description{
+    text-align: center;
+  }
+  /* .play-instantly-info .primary-description,
+  .play-games-info .primary-description {
+    padding: 30px 0;
+  } */
   .footer-btn ul {
     flex-wrap: wrap;
   }
   .games-btn-container {
-    margin: 130px 10px;
+    margin: 230px 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
