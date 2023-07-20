@@ -155,12 +155,13 @@ nav {
 .funny-video-section .primary-description {
   margin-bottom: 48px;
 }
-.card-container {
+ .card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
-.card {
+
+ .card {
   max-width: 342px;
   padding-bottom: 50px;
   border: 1px solid transparent;
@@ -171,7 +172,65 @@ nav {
   font-weight: 500;
   line-height: 30px;
   margin-top: 24px;
+} 
+
+.container {
+  position: relative;
+  width: 100%;
+/*   max-width: 342px */;
 }
+.container .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: black;
+  border-radius: 16px;
+  border: 3px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay p {
+  color:  #f948b2;
+  margin-top: 30%;
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+  border-radius: 16px;
+  border: 3px solid  #ff0486;
+}
+.container .icon {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
+.icon:hover {
+  color: #eee;
+}
+
+/* .card-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+} */
 
 /* funny video section styles end here */
 /* play instantly section styles start here  */
@@ -215,7 +274,7 @@ nav {
   align-items: center;
   gap: 20px;
   padding: 20px 20px;
-  border: none;
+  border: none; 
   border-radius: 50px;
   transition: border 0.3 easy, color 0.3 ease;
   border: 1px solid transparent;
@@ -301,6 +360,22 @@ footer {
 }
 /* footer section styles end here */
 
+
+/* .funny-video-section{
+  display: none;
+}
+.games-btn-container{
+  display: none;
+}
+.play-instantly-section{
+  display: none;
+} */
+/* header{
+  display: none;
+} */
+/* footer{
+  display: none;
+} */
 /* Responsive styles start here */
 /* mobile device media query */
 
@@ -325,25 +400,18 @@ footer {
   .banner-image img {
     width: 100%;
   }
+
   .card-container {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
-    width: 90%;
+    align-items: center;
+    /* width: 90%; */
+    padding: 0 10px;
   }
-  /*  .play-instantly-image{
-    width: 100%;
+  .card{
+   padding: 0;
   }
-  .instantly-img{
-    width: 100%;
-  } */
-  /*  .instantly-img {
-    position: static;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-bottom: 20px;
-    margin-left: auto;
-    display: block;
-  } */
+
   .play-instantly-image {
     width: 70%;
     margin: 0 auto;
@@ -425,6 +493,7 @@ footer {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    align-items: center;
   }
   .play-instantly-image {
     width: 70%;
@@ -448,4 +517,6 @@ footer {
   .footer-btn ul {
     flex-wrap: wrap;
   }
+  
+ 
 }
